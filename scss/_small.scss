@@ -1,0 +1,144 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+
+/*----------- apply a natural box layout model to all elements --------------*/
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+
+/*----------- BODY --------------*/
+body {
+    font-size: 16px;
+    font-family: Verdana, sans-serif;
+}
+
+/*----------- COLUMNS --------------*/
+div.flexed {display: flex; flex-wrap: wrap;}
+.column {padding: 0 1%}
+@for $i from 1 through 12 {
+    $w:($i / 12) * 96%;
+    .small-#{$i} {flex-basis: $w; margin: 1px}
+}
+
+/*----------- HEADER --------------*/
+header.header {
+    color: rgb(255, 255, 255);
+    background-color: $primaryColor;
+    padding-top: 30px;
+    padding-bottom: 5px;
+    border-top: 4px solid lighten($primaryColor, 10%);
+}
+header h1, h2 {
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+h1 {margin: 0; font-size: 2.2rem; font-family: 'Open Sans Condensed', sans-serif;}
+h2 {margin: 0; font-size: 1.2rem;}
+
+/*----------- NAVIGATION --------------*/
+nav {
+    background-color: lighten($primaryColor, 10%);
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+nav ul li {
+    float: left;
+}
+nav ul li a {
+    display: block;
+    color: #eee;
+    text-decoration: none;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 1.6rem;
+    text-align: center;
+    padding: 6px 10px 6px 0;
+}
+.last-nav {
+    padding-left: 10px;
+}
+
+nav ul li a:hover {
+    background-color: lighten($primaryColor, 20%);
+}
+nav ul li.active a {
+    background-color: darken($primaryColor, 3%);
+    color: #fff;
+    padding-left: 10px;
+}
+/*----------- MAIN --------------*/
+main {
+    min-height: 10rem;
+    overflow: hidden;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+img {
+    width: 100%;
+}
+.attorney-container {
+    margin: 20px 0;
+    text-align: center;
+}
+.info-box {
+    background-color: lighten($primaryColor, 80%);
+    border: 1px solid darken($primaryColor, 10%);
+}
+.client-container {
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+.client-info {
+    text-align: center;
+    background-color: darken($primaryColor, 3%);
+    color: #fff;
+    margin-bottom: 10px;
+    padding: 25px 0;
+}
+.blog-container {
+    margin-bottom: 20px;
+}
+.blog-info {
+    background-color: lighten($primaryColor, 80%)
+}
+.attorney-container h2 {
+    padding: 14px 0;
+}
+.attorney-container button {
+    background-color: darken($primaryColor, 3%);
+    color: #fff;
+    margin: 16px 0;
+    width: 80%;
+    padding: 4px 0;
+    border-radius: 7px;
+}
+button {
+    background-color: lighten($primaryColor, 80%);
+    width: 100%;
+    border: none;
+    padding: 2px;
+}
+.faq-box {
+    background-color: lighten($primaryColor, 80%)
+}
+.faq-container {
+    margin-bottom: 20px;
+}
+/*----------- FOOTER --------------*/
+footer {
+    border-top: 2px solid $primaryColor;
+    text-align: center;
+    font-size: 4.5rem;
+    color: darken($primaryColor, 3%)
+}
+footer i:hover {
+    color: lighten($primaryColor, 10%)
+}
+
+
+
+/*----- Clearfix: Force an Element not to collapse -----*/
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}

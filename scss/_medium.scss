@@ -1,0 +1,27 @@
+
+
+
+/*----------- BODY --------------*/
+div.flexed {
+    justify-content: space-around;
+}
+@for $i from 1 through 12 {
+    $w:($i / 12) * 96%;
+    .medium-#{$i} {flex-basis: $w; margin: 1px;}
+}
+.medium-0 {
+    flex-basis: 0%;
+}
+
+/*----------- HEADER --------------*/
+
+
+
+/*----------- NAVIGATION --------------*/
+
+
+/*----------- MAIN --------------*/
+
+
+/*----------- FOOTER --------------*/
+    
