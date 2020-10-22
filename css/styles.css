@@ -320,7 +320,7 @@ body {
   font-family: Verdana, sans-serif; }
 
 /*----------- COLUMNS --------------*/
-div.flexed {
+.flexed {
   display: flex;
   flex-wrap: wrap; }
 
@@ -394,6 +394,11 @@ h1 {
 h2 {
   margin: 0;
   font-size: 1.2rem; }
+
+header input {
+  float: right;
+  height: 28px;
+  width: 160px; }
 
 /*----------- NAVIGATION --------------*/
 nav {
@@ -557,6 +562,9 @@ footer i:hover {
     flex-basis: 0%; }
 
   /*----------- HEADER --------------*/
+  header input {
+    margin-top: -28px; }
+
   /*----------- NAVIGATION --------------*/
   /*----------- MAIN --------------*/
   /*----------- FOOTER --------------*/ }
